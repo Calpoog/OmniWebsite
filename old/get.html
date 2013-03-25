@@ -1,0 +1,104 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Omni</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="image_src" href="http://omni.com/images/siteThumbnail.jpg" />
+
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- custom javascript functions -->
+    <!--script src="js/functions.js" type="text/javascript"></script-->
+
+    <!-- jquery & fancybox -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <!--link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.1" type="text/css" media="screen" /-->
+    <!--script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.1"></script-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //$(".fancybox").fancybox();
+            $('.scrollup').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+
+            $(window).scroll(function (event) {
+                // what the y position of the scroll is
+                var y = $(this).scrollTop();
+                    $('#floatMenu').css({
+                        'top': (y + 100)
+                    });
+            });
+        });
+    </script>
+    <!--script src='/google_analytics_auto.js'></script-->
+</head>
+
+<body>
+<div id="bgBody">&nbsp;</div>
+<div id="floatMenu">
+    &nbsp;
+</div>
+<div id="wrapper">
+    <header>
+        <div id="nameplate">
+            <img src='assets/nameplate.png'/>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../">Overview</a></li>
+                <li><a href="details.html">Details</a></li>
+                <li><a href="./get.html">Get</a></li>
+                <li><a href="people.html">People</a></li>
+            </ul>
+        </nav>
+    </header><!-- /header -->
+    <div id="page">
+
+        <section id="intro">
+            <div>
+                <h1>Custom Events</h1>
+                <span class="subtitle">What you want to know, when you want to know it.</span><br /><br />
+                We give you a bunch of info: What the user is doing, what page they are on,
+                where they are coming from, if they are scrolling quickly, if they are reading
+                something or what page elements they are hovering over. This is automatic.<br /><br />
+                We have a real-time analytics processor that is running. We have predefined simple
+                patterns such as leaving page and coming back. We can send you data on actual event
+                triggers; Each time it happened and which users it happened to.
+            </div>
+        </section><!-- /intro -->
+
+        <section id="features">
+            <h1>Pricing Plans</h1>
+            <div class="feature">
+                <h5>Basic</h5>
+                For noobs.
+            </div>
+            <div class="feature">
+                <h5>Decent</h5>
+                I mean, if you don't want more.
+            </div>
+            <div class="feature">
+                <h5>Platinum</h5>
+                Comes with free chainz.
+            </div>
+            <div class="feature">
+                <h5>Super Duper</h5>
+                For winners.
+            </div>
+            <a href="#" class="scrollup"><div class="toTop"><img src="assets/toTop.png"/></div></a>
+        </section><!-- /features -->
+    </div><!-- /page -->
+
+    <footer>
+        copyright &copy;2013 codapt | site design by gyroscope designs
+    </footer><!-- /footer -->
+</div><!-- /wrapper -->
+</body>
+
+</html>

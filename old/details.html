@@ -1,0 +1,196 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Omni</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="image_src" href="http://omni.com/images/siteThumbnail.jpg" />
+
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    <!-- custom javascript functions -->
+    <!--script src="js/functions.js" type="text/javascript"></script-->
+
+    <!-- jquery & fancybox -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <!--link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.1" type="text/css" media="screen" /-->
+    <!--script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.1"></script-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //$(".fancybox").fancybox();
+            $('.scrollup').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+
+            $('#float-menu li').click(function() {
+                window.location = "#" + $(this).data("to");
+            })
+
+            $(window).scroll(function (event) {
+                // what the y position of the scroll is
+                var section = null,
+                    y = $(this).scrollTop();
+                if (y > 100) {
+                    $('#float-menu').css({
+                        'top': y
+                    });
+                } else {
+                    $('#float-menu').css({
+                        'top': 100
+                    });
+                }
+
+                $('section').each(function() {
+                    if (y + $(window).height() > $(this).offset().top + $(this).height()) {
+                        section = this;
+                    }
+                });
+
+                $('#float-menu li').removeClass("selected");
+                if (section != null) {
+                    $('#float-menu li[data-to="' + $(section).data("section") + '"]').addClass("selected");
+                }
+            });
+        });
+    </script>
+    <!--script src='/google_analytics_auto.js'></script-->
+</head>
+
+<body>
+<div id="bigWrapper">
+<div id="float-menu">
+    <ul>
+        <li data-to="demo1">Demo 1</li>
+        <li data-to="features">Features</li>
+        <li data-to="demo2">Demo 2</li>
+        <li data-to="explanation">Explanation</li>
+        <li data-to="demo3">Demo 3</li>
+        <li data-to="benefits">Benefits</li>
+    </ul>
+    &nbsp;
+</div>
+<div id="wrapper">
+    <header>
+        <div id="nameplate">
+            <img src='assets/nameplate.png'/>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../">Overview</a></li>
+                <li><a href="./details.html">Details</a></li>
+                <li><a href="get.html">Get</a></li>
+                <li><a href="people.html">People</a></li>
+            </ul>
+        </nav>
+    </header><!-- /header -->
+    <div id="page">
+
+        <section class="header">
+            <h1>Omniscience</h1>
+            <span class="subtitle">MAXIMIZE DIGITAL INTERACTION</span>
+        </section><!-- /demoHeader -->
+
+        <section class="demo" data-section="demo1">
+            <a name="demo1"></a>
+
+            <img src="assets/video.png" />
+            <div class="demo-content">
+                <h2>DEMO</h2>
+                <h3>YEAH. IT'S COOL.</h3>
+                Omni is a better kind of analytics that focuses on people's behavioral patterns when they interact with your website.
+            </div>
+            <a href="#" class="scrollup"><div class="toTop"><img src="assets/toTop.png"/></div></a>
+        </section><!-- /demo -->
+
+        <section class="features" data-section="features">
+            <a name="features"></a>
+            <img src="assets/image.png" />
+            <img src="assets/image.png" />
+            <h4>FEATURES</h4>
+            <div class="feature">
+                <h5>SMART ANALYTICS</h5>
+                Connecting site visit data with demographic data and then sales data is way too complicated. With Omni, you can know exactly who is on your site and what they are doing on your site right now. And how that connects to what they did last week right now. No data analysis necessary.
+            </div>
+            <div class="feature">
+                <h5>SMART PATTERNS</h5>
+                Bob seems to always do this. And Sally seems to always do that. Omni remembers which people do what, even if they aren't logged in or haven't even been to your site before.
+            </div>
+            <div class="feature">
+                <h5>SMART ASSOCIATIONS</h5>
+                Connect user profile data to analytics data on the fly. It's a bot? You can block it right now if you want...
+            </div>
+            <div class="feature">
+                <h5>SMART FEATURES</h5>
+                Interaction is a two-way street. How does your website interact with the people on it? With Omni, your website can talk to your users and help guide them to what they want.
+            </div>
+            <a href="#" class="scrollup"><div class="toTop"><img src="assets/toTop.png"/></div></a>
+        </section><!-- /features -->
+
+        <section class="demo" data-section="demo2">
+            <a name="demo2"></a>
+            <img src="assets/video.png" />
+            <div class="demo-content">
+                <h2>BEHAVIORS</h2>
+                <h3>ANALYZING USER INTERACTION</h3>
+                We don't just look at numbers. We realize that data comes from real people who have real thoughts and take real actions. So we recognize predetermined behavioral patterns and connect this information to their profile--on the fly.
+            </div>
+            <a href="#" class="scrollup"><div class="toTop"><img src="assets/toTop.png"/></div></a>
+        </section><!-- /demo2 -->
+
+        <section class="features" data-section="explanation">
+            <a name="explanation"></a>
+            <h2>How It Works</h2>
+            We don't just look at numbers. We realize that data comes from real people who have real thoughts and take real actions. So we recognize predetermined behavioral patterns and connect this information to their profile--on the fly.
+        </section>
+
+        <section class="demo" data-section="demo3">
+            <a name="demo3"></a>
+            <h5>Omni is a better kind of analytics that focuses on people's<br/>behavioral patterns when they interact with your website.</h5><br/>
+            <iframe width="853" height="480" src="http://www.youtube.com/embed/Es44QTJmuZ0?autohide=1&rel=0&end=240&showinfo=0&color=white" frameborder="0" allowfullscreen></iframe>
+            <a href="#" class="scrollup"><div class="toTop"><img src="assets/toTop.png"/></div></a>
+        </section><!-- /demo3 -->
+
+        <section class="features" data-section="benefits">
+            <a name="benefits"></a>
+            <h4>Benefits</h4>
+            <div class="feature">
+                <h5>Security</h5>
+                You can see if there is anything on your site collecting data against your will; be it malicious bots, scrapers, or misused script injection. You can also see which banner ads, widgets, gadgets are occurring; and see if they have been hacked: causing security breaches or backdoors into you site.
+            </div>
+            <div class="feature">
+                <h5>In House Data</h5>
+                You control your data. Omni can stream it to you in any form you want. We can make it fit your database schema, we can create data exports, or we can just send you reports. With Omni, we can even backup your data and give you copies at the end of the quarter if you want.
+            </div>
+            <div class="feature">
+                <h5>No Software</h5>
+                With Omni, there is nothing to install on your server. Just insert this single tag on your webpage:
+                <br /><span class="code">&lt;script src="http://5dc.us/o.js"&gt; &lt;/script&gt;</span><br />And that's it!
+            </div>
+            <div class="feature">
+                <h5>Realtime Tracking</h5>
+                In most cases "real time data" is refreshed every minute, sometimes even hourly. Not with Omni. Any data you receive from Omni is updated every second, every time. You can utilize this intelligence to make decisions at the same time someone is using your page, at the point of sale.
+            </div>
+            <div class="feature">
+                <h5>Optimized Data</h5>
+                Omni is efficient. Omni won't send you mountains of useless data when nothing is happening. Omni knows if a real person has loaded your page but is actually doing something else. If someone is doing nothing on your page, Omni will just tell you that someone is doing nothing.
+            </div>
+            <div class="feature">
+                <h5>Customized Data</h5>
+                Omni works by identifying patterns with events. You can customize which event triggers are important to you. That way you only see what is important. With Omni, you can see what your users are doing at the same time they trigger these events.
+            </div>
+        </section>
+    </div><!-- /page -->
+
+    <footer>
+        copyright &copy;2013 codapt | site design by gyroscope designs
+    </footer><!-- /footer -->
+</div><!-- /wrapper -->
+</div><!-- /bigWrapper -->
+</body>
+
+</html>

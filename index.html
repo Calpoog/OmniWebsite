@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Omni</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="image_src" href="http://omni.com/images/siteThumbnail.jpg" />
+
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Nixie+One|Lato|Monda|Raleway|Gafata' rel='stylesheet' type='text/css'>
+
+    <!-- jquery -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $('#floatMenu li').click(function() {
+                window.location = "#" + $(this).data("to");
+            })
+
+            $(window).scroll(function (event) {
+                // what the y position of the scroll is
+                var section = null,
+                        y = $(this).scrollTop();
+                if (y > 100) {
+                    $('#floatMenu').css({
+                        'top': y
+                    });
+                } else {
+                    $('#floatMenu').css({
+                        'top': 100
+                    });
+                }
+
+                $('section').each(function() {
+                    if (y + $(window).height() > $(this).offset().top + $(this).height()) {
+                        section = this;
+                    }
+                });
+
+                $('#floatMenu li').removeClass("selected");
+                if (section != null) {
+                    $('#floatMenu li[data-to="' + $(section).data("section") + '"]').addClass("selected");
+                }
+            });
+        });
+    </script>
+
+<body>
+
+<div id="bigWrapper">
+<div id="floatMenu">
+    <ul>
+        <li data-to="demo1">Demo 1</li>
+        <li data-to="features">Features</li>
+        <li data-to="demo2">Demo 2</li>
+        <li data-to="explanation">Explanation</li>
+        <li data-to="demo3">Demo 3</li>
+        <li data-to="benefits">Benefits</li>
+    </ul>
+    &nbsp;
+</div>
+<div id="wrapper">
+
+    <div id="page">
+        <header>
+            <div class="container">
+                <div id="nameplate">
+                    <img src='assets/nameplate.png'/>
+                </div>
+                <span id="logo-sub">Behavioral Pattern Analytics</span>
+                <nav>
+                    <ul>
+                        <li><a href="../" class="selected">Overview</a></li>
+                        <li><a href="details.html">Details</a></li>
+                        <li><a href="./get.html">Get</a></li>
+                        <li><a href="people.html">People</a></li>
+                    </ul>
+                </nav><!-- /container -->
+            </div>
+        </header><!-- /header -->
+
+        <section class="section-1">
+                <img width="700" height="400" src="assets/video-placeholder.jpg" />
+        </section><!-- /demo -->
+
+        <section class="section-2">
+                <span class="emphasis">Omni</span> is a better kind of analytics that focuses on people's<br/>behavioral patterns when they interact with your website.
+        </section>
+
+        <section class="title2">
+            Details
+        </section>
+
+        <section class="title">
+            Features
+        </section>
+
+        <section class="section-1">
+            <div class="feature">
+                <h5>Smart Analytics</h5>
+                Connecting site visit data with demographic data and then sales data is way too complicated. With Omni, you can know exactly who is on your site and what they are doing on your site right now. And how that connects to what they did last week right now. No data analysis necessary.
+            </div>
+            <div class="feature">
+                <h5>Smart Patterns</h5>
+                Bob seems to always do this. And Sally seems to always do that. Omni remembers which people do what, even if they aren't logged in or haven't even been to your site before.
+            </div>
+            <div class="feature">
+                <h5>Smart Associations</h5>
+                Connect user profile data to analytics data on the fly. It's a bot? You can block it right now if you want...
+            </div>
+            <div class="feature">
+                <h5>Smart Websites</h5>
+                Interaction is a two-way street. How does your website interact with the people on it? With Omni, your website can talk to your users and help guide them to what they want.
+            </div>
+        </section>
+    </div><!-- /page -->
+
+    <footer>
+        copyright &copy;2013 codapt | site design by gyroscope designs
+    </footer><!-- /footer -->
+
+</div><!-- /wrapper -->
+</div><!-- /bigWrapper -->
+</body>
+
+</html>

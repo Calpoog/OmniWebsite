@@ -1,0 +1,374 @@
+/****************** Color reference chart********************
+
+                    comment             color
+Burnt Orange	    bo					#1776bf
+Darker Orange		dg					#513d2e
+Link Blue			lb					#2f63cc
+Background Green    bg                  #a5d140
+
+*/
+
+/* ---------------------------------------------- */
+/* 	Html Elements                                 */
+/* ---------------------------------------------- */
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2em;
+    color: #555;
+    background-color: #1776bf;
+    /*background: #ccc url("../assets/bgBody.png") repeat-x;*/
+}
+
+
+/* html text elements */
+a {
+    color: /*lb*/#2f63cc;
+    text-decoration: none;
+}
+a:hover{
+    color: /*do*/#513d2e;
+    border-bottom: 1px solid /*do*/#513d2e;
+}
+a:active{
+    color: /*bo*/#1776bf;
+    border-bottom: 1px solid /*bo*/#1776bf;
+}
+
+h1 {
+    color: #464646;
+    font-size: 1.9em;
+    font-weight: 700;
+    margin: 0;
+    display: inline-block;
+}
+h2 {
+    font-size: 1.2em;
+    color: #44c26b;
+    margin-bottom: .4em;
+}
+h3 {
+    font-size: 1.7em;
+    color: #1776bf;
+    margin: .4em 0 1em 0;
+    line-height: 1.2em;
+}
+h4 {
+    font-size: 1.2em;
+    margin-top: 1em;
+    color: #ff8400;
+}
+h5 {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+h6 {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-top: 1em;
+}
+
+p {
+    margin-bottom: .6em;
+}
+
+strong, b {
+    font-weight: normal;
+}
+center {
+    text-align: center;
+}
+em, i, address {
+    font-style: italic;
+}
+code, samp, kbd, var, tt {
+    font-family: Courier New, monospace;
+}
+sub{
+    font-size: .7em;
+    vertical-align: text-bottom;
+}
+sup{
+    font-size: .7em;
+    vertical-align: text-top;
+}
+.code {
+    font-family: courier;
+    font-size: .8em;
+}
+
+/* html block elements */
+blockquote {
+    background: #f0f0f0 url("../assets/qt.png") no-repeat;
+    background-position: 5px 5px;
+    color: #333;
+    text-align: justify;
+    padding: 10px 10px 10px 40px;
+    margin: 1.2em;
+    border-radius: 18px 0;
+}
+ul, ol, dl {
+    margin: .5em 2em;
+}
+li, dt, dd {
+    margin-bottom: .2em;
+}
+ul li {
+    list-style: circle;
+}
+ol li {
+    list-style: decimal;
+}
+dd {
+    margin-left: 1em;
+}
+
+table.formatted {
+    margin: 1.2em;
+    border-left: 5px solid /*bo*/#1776bf;
+    background-color: #f0f0f0;
+}
+table.formatted caption {
+    padding-bottom: .3em;
+}
+table.formatted td,table.formatted th {
+    padding: .3em .6em;
+}
+table.formatted th {
+    font-style: italic;
+}
+
+header {
+    position: relative;
+    font-family: "Open Sans Condensed", Helvetica, sans-serif;
+    font-weight: 300;
+    height: 100px;
+}
+nav {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    padding: 10px 30px;
+    font-size: 1.1em;
+}
+nav ul {
+    margin: 0;
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 0 0 50px;
+}
+nav ul li a {
+    color: #fff;
+    text-shadow: 1px 1px 0 /*bo*/#313436;
+    -webkit-text-shadow: 1px 1px 0 /*bo*/#313436;
+    -moz-text-shadow: 1px 1px 0 /*bo*/#313436;
+}
+nav ul li a:hover{
+    position: relative;
+    left: -1px;
+    top:-1px;
+    color: #fff;
+    border-bottom: none;
+}
+nav ul li a:active{
+    color: #000;
+    border-bottom: none;
+}
+
+section {
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer {
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* ---------------------------------------------- */
+/* 	Page Content                                  */
+/* ---------------------------------------------- */
+
+#bigWrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#wrapper {
+    margin: 0;
+    float: left;
+    width: 75%;
+    min-width: 600px;
+    max-width: 1000px;
+    padding: 0;
+    position: relative;
+}
+#page {
+    background: #fafafa;
+    box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* sections */
+
+.demo {
+    background-color: #d9d9d9;
+    border-bottom: 15px solid #c3c3c3;
+    position: relative;
+}
+.demo-content {
+    display: inline-block;
+    margin-left: 30px;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+}
+.header {
+    padding-bottom: 15px;
+}
+.features img {
+    float: right;
+    margin-top: 30px;
+}
+.feature {
+    display: inline-block;
+    text-align: left;
+    width: 40%;
+    margin: 0 50px 30px 0;
+    vertical-align: top;
+}
+.feature h5 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #1776bf;
+}
+.demo h5 {
+    color: #fff;
+    text-shadow: 1px 1px 0 /*do*/#513d2e;
+}
+.divided {
+    border-bottom: 1px solid #bfbfbf;
+}
+
+/* nameplate */
+#nameplate {
+    position: absolute;
+    bottom: 0;
+    font-size: 55px;
+}
+#nameplate img{
+    height: 100px;
+}
+
+/* spans */
+.subtitle {
+    font-size: 1em;
+    margin-left: .8em;
+    padding-top: .2em;
+    padding-bottom: .4em;
+    display: inline-block;
+    color: #44c26b;
+}
+.accent {
+    color: #1c3c7a;
+}
+
+/* images */
+.jpgHolder, .pngHolder {
+    width: 140px;
+    height: 140px;
+    background: url("../assets/checkers.jpg");
+    border: none;
+}
+.pngHolder {
+    box-shadow: 0 0 40px 25px #fafafa inset;
+}
+
+/* columns */
+.twoCol {
+    background-color: #e5e5e5;
+    position: relative;
+    float: left;
+    left: 600px;
+    margin: -20px;
+    border-left: 1px solid #bfbfbf;
+}
+.rightCol {
+    position: relative;
+    float: right;
+    width: 259px;
+    left: -600px;
+    padding: 20px;
+}
+.leftCol{
+    position: relative;
+    width: 560px;
+    left: -600px;
+    float: left;
+    padding: 20px;
+}
+
+/* floating menu */
+#float-menu {
+    float: left;
+    width: 12.5%;
+    position: relative;
+    top: 100px;
+}
+
+#float-menu ul {
+    width: 100%;
+    max-width: 200px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    padding: 0 7px 0 0;
+    text-align: center;
+}
+
+#float-menu li {
+    color: #fafafa;
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+}
+
+#float-menu li:hover {
+    background-color: #313436;
+    cursor: pointer;
+}
+
+#float-menu li.selected {
+    font-weight: bold;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
+/* go-to-top button */
+.toTop {
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+    padding: 2px 0;
+}
+.toTop img {
+    height: 6px;
+}
+.toTop:hover {
+    border-top: 1px solid #bfbfbf;
+}
